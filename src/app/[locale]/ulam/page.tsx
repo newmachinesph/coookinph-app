@@ -1,4 +1,5 @@
 import MobileLayout from '@/layouts/MobileLayout';
+import Image from 'next/image';
 import React from 'react';
 
 const ulamDishes = [
@@ -45,9 +46,11 @@ export default function UlamPage() {
               key={dish.name}
               className="flex items-center bg-white rounded-lg shadow p-3"
             >
-              <img
+              <Image
                 src={dish.image}
                 alt={dish.name}
+                width={64}
+                height={64}
                 className="w-16 h-16 object-cover rounded-md mr-4"
               />
               <div>

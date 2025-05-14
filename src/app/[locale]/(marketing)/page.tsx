@@ -1,5 +1,7 @@
+'use client';
 import MenuGrid from '@/components/MenuGrid';
 import MobileLayout from '@/layouts/MobileLayout';
+import Image from 'next/image';
 import React from 'react';
 
 const featuredDishes = [
@@ -24,15 +26,6 @@ export default function HomePage() {
   return (
     <MobileLayout>
       <div className="flex flex-col items-center w-full px-4 pb-[80px]">
-        {/* Search Bar */}
-        <div className="w-full mt-6 mb-4">
-          <input
-            type="text"
-            placeholder="What are you craving?"
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-        </div>
-
         {/* Category Menu */}
         <MenuGrid />
 
@@ -45,9 +38,11 @@ export default function HomePage() {
                 key={dish.name}
                 className="flex items-center bg-white rounded-lg shadow p-3"
               >
-                <img
+                <Image
                   src={dish.image}
                   alt={dish.name}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 object-cover rounded-md mr-4"
                 />
                 <div>

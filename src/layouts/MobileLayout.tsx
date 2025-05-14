@@ -17,14 +17,8 @@ const HEADER_HEIGHT = 96; // px, adjust if needed
 const NAV_HEIGHT = 72; // px, adjust if needed
 
 const MobileLayout: React.FC<MobileLayoutProps> = ({ children }) => {
-  const [showSplash, setShowSplash] = useState(true);
   const [showNavState, setShowNavState] = useState(true);
   const lastScrollY = useRef(0);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setShowSplash(false), 1500);
-    return () => clearTimeout(timeout);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,12 +43,6 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({ children }) => {
           minHeight: `calc(100vh - ${HEADER_HEIGHT + NAV_HEIGHT}px)`,
         }}
       >
-        {showSplash && (
-          <div
-            className="absolute inset-0 z-100 flex items-center justify-center transition-opacity duration-700 bg-red-600 bg-opacity-90"
-            style={{ pointerEvents: 'none', opacity: showSplash ? 1 : 0 }}
-          />
-        )}
         {children}
       </main>
       <MobileNav show={showNavState} />

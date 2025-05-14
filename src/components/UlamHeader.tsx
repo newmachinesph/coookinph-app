@@ -21,23 +21,7 @@ const UlamHeader: React.FC = () => (
         <Box className="w-6 h-6 cursor-pointer" style={{ color: 'var(--theme-primary-text)' }} />
       </span>
     </div>
-    <div className="mt-3">
-      <div className="bg-[var(--theme-primary)] rounded-full flex items-center px-4 py-2 border border-cream-can-300">
-        <span className="search-icon mr-2 h-6 w-6 flex items-center justify-center" style={{ color: 'var(--theme-primary-text)' }}>
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-            <path d="M17 17L21 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </span>
-        <input
-          type="text"
-          placeholder="What are you craving?"
-          id="openSearch"
-          className="flex-1 text-sm outline-none bg-transparent placeholder-[var(--theme-primary-text)]"
-          style={{ color: 'var(--theme-primary-text)' }}
-        />
-      </div>
-    </div>
+
   </header>
 );
 
