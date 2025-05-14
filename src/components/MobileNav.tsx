@@ -15,7 +15,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ show }) => (
     className={
       `fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-[var(--theme-primary)] border-t flex justify-around items-center py-2 text-xs z-50 text-white w-full
       transition-transform duration-300
-      ${show ? 'translate-y-0' : 'translate-y-full'}`
+      ${!show ? 'translate-y-0' : 'translate-y-full'}`
     }
     style={{ willChange: 'transform' }}
   >

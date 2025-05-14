@@ -21,24 +21,34 @@ const featuredDishes = [
     image: '/images/laing.jpg',
     description: 'Taro leaves in coconut milk.',
   },
+  {
+    name: 'Kare-Kare',
+    image: '/images/hero-image.jpg',
+    description: 'Peanut stew with oxtail and vegetables.',
+  },
+  {
+    name: 'Bicol Express',
+    image: '/images/chefs.png',
+    description: 'Spicy pork in coconut milk.',
+  },
 ];
 
 export default function HomePage() {
   return (
     <MobileLayout>
       <HomeHeader />
-      <div className="relative flex flex-col items-center w-full px-4 pb-[80px]">
+      <div className="relative flex flex-col items-center w-full px-4 pb-[20px]">
         {/* Category Menu */}
         <MenuGrid />
 
         {/* Featured Dishes */}
         <div className="w-full mt-4">
-          <h2 className="text-lg font-bold mb-3">Featured Dishes</h2>
+          <h2 className="text-lg font-bold mb-6">Featured Dishes</h2>
           <div className="grid grid-cols-1 gap-4">
             {featuredDishes.map(dish => (
               <div
                 key={dish.name}
-                className="flex items-center bg-white rounded-lg shadow p-3"
+                className="flex items-start bg-white rounded-lg"
               >
                 <img
                   src={dish.image}

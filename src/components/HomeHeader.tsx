@@ -16,7 +16,7 @@ const HomeHeader: React.FC<{ onSearchChange?: (e: React.ChangeEvent<HTMLInputEle
           onChange={onSearchChange}
         />
       </div>
-      <div className="flex items-center space-x-3 text-xl ml-4">
+      <div className="flex items-center space-x-3 text-xl ml-4 w-16">
         <span className="cursor-pointer">
           <Heart className="w-6 h-6" />
         </span>

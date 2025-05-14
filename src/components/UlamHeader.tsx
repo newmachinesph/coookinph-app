@@ -5,7 +5,7 @@ import React from 'react';
 const UlamHeader: React.FC<{ onSearchChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }> = ({ onSearchChange }) => (
   <header className="fixed top-0 left-0 right-0 z-40 bg-[var(--theme-primary)] px-4 pt-4 pb-2 text-white max-w-[480px] mx-auto w-full">
     <div className="flex items-center h-10">
-      <Link href=".." className="back-arrow cursor-pointer flex items-center">
+      <Link href=".." className="back-arrow cursor-pointer flex items-center w-16">
         <NavArrowLeft className="w-6 h-6 text-white cursor-pointer" />
       </Link>
       <div className="flex-1 flex flex-col items-center">
@@ -14,7 +14,7 @@ const UlamHeader: React.FC<{ onSearchChange?: (e: React.ChangeEvent<HTMLInputEle
           Bonifacio Global City
         </span>
       </div>
-      <div className="flex items-center space-x-3 text-xl ml-4">
+      <div className="flex items-center space-x-3 text-xl ml-4 w-16">
         <span className="cursor-pointer">
           <Heart className="w-6 h-6" />
         </span>

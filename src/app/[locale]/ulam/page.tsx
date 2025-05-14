@@ -1,9 +1,8 @@
 import UlamHeader from '@/components/UlamHeader';
 import MobileLayout from '@/layouts/MobileLayout';
-import Image from 'next/image';
 import React from 'react';
 
-const ulamDishes = [
+const featuredDishes = [
   {
     name: 'Adobo',
     image: '/images/adobo.jpg',
@@ -33,7 +32,7 @@ const ulamDishes = [
 
 export default function UlamPage() {
   return (
-    <MobileLayout>
+    <MobileLayout hideNav={true}>
       <UlamHeader />
       <div className="flex flex-col items-center w-full px-4 pt-8">
         <h1 className="text-2xl font-bold mt-6 mb-2" style={{ color: 'var(--theme-primary-text)' }}>
@@ -42,25 +41,26 @@ export default function UlamPage() {
         <p className="text-gray-700 text-center mb-6">
           Discover delicious Filipino ulam (main dishes) from home chefs and cooks!
         </p>
-        <div className="grid grid-cols-1 gap-4 w-full">
-          {ulamDishes.map(dish => (
-            <div
-              key={dish.name}
-              className="flex items-center bg-white rounded-lg shadow p-3"
-            >
-              <Image
-                src={dish.image}
-                alt={dish.name}
-                width={64}
-                height={64}
-                className="w-16 h-16 object-cover rounded-md mr-4"
-              />
-              <div>
-                <div className="font-semibold">{dish.name}</div>
-                <div className="text-sm text-gray-600">{dish.description}</div>
+        <div className="w-full mt-4">
+          <h2 className="text-lg font-bold mb-6">Featured Dishes</h2>
+          <div className="grid grid-cols-1 gap-4">
+            {featuredDishes.map(dish => (
+              <div
+                key={dish.name}
+                className="flex items-start bg-white rounded-lg"
+              >
+                <img
+                  src={dish.image}
+                  alt={dish.name}
+                  className="w-16 h-16 object-cover rounded-md mr-4"
+                />
+                <div>
+                  <div className="font-semibold">{dish.name}</div>
+                  <div className="text-sm text-gray-600">{dish.description}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </MobileLayout>

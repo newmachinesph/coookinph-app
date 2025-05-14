@@ -10,12 +10,13 @@ import { useEffect, useRef, useState } from 'react';
  */
 type MobileLayoutProps = {
   children: ReactNode;
+  hideNav?: boolean;
 };
 
 const HEADER_HEIGHT = 96; // px, adjust if needed
 const NAV_HEIGHT = 72; // px, adjust if needed
 
-const MobileLayout: React.FC<MobileLayoutProps> = ({ children }) => {
+const MobileLayout: React.FC<MobileLayoutProps> = ({ children, hideNav }) => {
   const [showNavState, setShowNavState] = useState(true);
   const lastScrollY = useRef(0);
 
@@ -43,7 +44,8 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({ children }) => {
       >
         {children}
       </main>
-      <MobileNav show={showNavState} />
+      {!hideNav
+        && <MobileNav show={showNavState} />}
     </div>
   );
 };
