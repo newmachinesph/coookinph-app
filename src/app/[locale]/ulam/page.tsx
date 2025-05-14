@@ -1,3 +1,4 @@
+import UlamHeader from '@/components/UlamHeader';
 import MobileLayout from '@/layouts/MobileLayout';
 import Image from 'next/image';
 import React from 'react';
@@ -33,6 +34,7 @@ const ulamDishes = [
 export default function UlamPage() {
   return (
     <MobileLayout>
+      <UlamHeader />
       <div className="flex flex-col items-center w-full px-4 pb-[80px]">
         <h1 className="text-2xl font-bold mt-6 mb-2" style={{ color: 'var(--theme-primary-text)' }}>
           Ulam

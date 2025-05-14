@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
+import HomeHeader from '@/components/HomeHeader';
 import MenuGrid from '@/components/MenuGrid';
 import MobileLayout from '@/layouts/MobileLayout';
-import Image from 'next/image';
 import React from 'react';
 
 const featuredDishes = [
@@ -25,7 +26,8 @@ const featuredDishes = [
 export default function HomePage() {
   return (
     <MobileLayout>
-      <div className="flex flex-col items-center w-full px-4 pb-[80px]">
+      <HomeHeader />
+      <div className="relative flex flex-col items-center w-full px-4 pb-[80px]">
         {/* Category Menu */}
         <MenuGrid />
 
@@ -38,11 +40,9 @@ export default function HomePage() {
                 key={dish.name}
                 className="flex items-center bg-white rounded-lg shadow p-3"
               >
-                <Image
+                <img
                   src={dish.image}
                   alt={dish.name}
-                  width={64}
-                  height={64}
                   className="w-16 h-16 object-cover rounded-md mr-4"
                 />
                 <div>

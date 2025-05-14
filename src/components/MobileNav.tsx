@@ -19,27 +19,27 @@ const MobileNav: React.FC<MobileNavProps> = ({ show }) => (
     }
     style={{ willChange: 'transform' }}
   >
-    <div className="text-center nav-button">
-      <Home className="iconoir-home nav-icon nav-icon-active mx-auto" />
-      <br />
+    <div className="text-center nav-button flex flex-col items-center gap-2">
+      <Home className="iconoir-home nav-icon nav-icon-active mx-auto text-lg" />
+
       Home
     </div>
-    <div className="text-center nav-button">
-      <Box className="iconoir-box nav-icon mx-auto" />
-      <br />
+    <div className="text-center nav-button flex flex-col items-center gap-2">
+      <Box className="iconoir-box nav-icon mx-auto text-lg" />
+
       Orders
     </div>
     <div className="text-center">
-      <div className="w-14 h-14 rounded-full bg-white border-4 border-[#8C2F1B] -mt-8" />
+      <div className="w-14 h-14 rounded-full bg-white border-4 border-[#8C2F1B] -mt-10" />
     </div>
-    <div className="text-center nav-button">
-      <ChatBubble className="iconoir-chat-bubble nav-icon mx-auto" />
-      <br />
+    <div className="text-center nav-button flex flex-col items-center gap-2">
+      <ChatBubble className="iconoir-chat-bubble nav-icon mx-auto text-lg" />
+
       Chat
     </div>
-    <div className="text-center nav-button">
-      <User className="iconoir-user nav-icon mx-auto" />
-      <br />
+    <div className="text-center nav-button flex flex-col items-center gap-2">
+      <User className="iconoir-user nav-icon mx-auto text-lg" />
+
       Profile
     </div>
   </nav>

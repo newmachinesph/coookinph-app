@@ -1,7 +1,6 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import Header from '@/components/Header';
 import MobileNav from '@/components/MobileNav';
 import { useEffect, useRef, useState } from 'react';
 
@@ -36,7 +35,6 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({ children }) => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center">
-      <Header />
       <main
         className="w-full max-w-[480px] mx-auto flex-1 pt-[96px] pb-[80px] px-0 relative overflow-hidden"
         style={{

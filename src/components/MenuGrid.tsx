@@ -11,7 +11,7 @@ const MENU_ITEMS = [
 ];
 
 const MenuGrid: React.FC = () => (
-  <div className="grid grid-cols-4 gap-4 pb-4 w-full mt-8">
+  <div className="grid grid-cols-4 gap-3 pb-4 w-full">
     {MENU_ITEMS.map(({ label, icon, href }) =>
       href
         ? (
