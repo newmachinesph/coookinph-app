@@ -36,7 +36,7 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen flex flex-col items-center">
       <main
-        className="w-full max-w-[480px] mx-auto flex-1 pt-[96px] pb-[80px] px-0 relative overflow-hidden"
+        className="w-full max-w-[480px] mx-auto flex-1 py-20 px-0 relative overflow-hidden"
         style={{
           minHeight: `calc(100vh - ${HEADER_HEIGHT + NAV_HEIGHT}px)`,
         }}

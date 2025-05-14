@@ -3,7 +3,7 @@ import React from 'react';
 
 const MENU_ITEMS = [
   { label: 'Ulam', icon: '🍲', href: 'ulam' }, // Main dishes
-  { label: 'Rice Meals', icon: '🍚', href: 'rice-meals' }, // Rice meals
+  { label: 'Meals', icon: '🍚', href: 'rice-meals' }, // Rice meals
   { label: 'Almusal', icon: '🍳', href: 'almusal' }, // Breakfast
   { label: 'Tanghalian', icon: '🍛', href: 'tanghalian' }, // Lunch
   { label: 'Gabihan', icon: '🍽️', href: 'gabihan' }, // Dinner
@@ -18,7 +18,7 @@ const MenuGrid: React.FC = () => (
             <Link
               key={label}
               href={href}
-              className="flex flex-col items-center justify-center rounded-xl bg-cream-can-100 hover:bg-cream-can-200 transition p-4 border border-[var(--theme-primary-text)] cursor-pointer w-full h-full min-w-0"
+              className="flex flex-col items-center justify-center rounded-xl bg-theme-secondary/20 hover:bg-theme-secondary/50 transition p-4 cursor-pointer w-full h-full min-w-0"
             >
               <span className="text-3xl mb-2">{icon}</span>
               <span className="text-xs font-semibold" style={{ color: 'var(--theme-primary-text)' }}>{label}</span>
@@ -27,7 +27,7 @@ const MenuGrid: React.FC = () => (
         : (
             <div
               key={label}
-              className="flex flex-col items-center justify-center rounded-xl bg-cream-can-100 hover:bg-cream-can-200 transition p-4 border border-[var(--theme-primary-text)] cursor-pointer w-full h-full min-w-0"
+              className="flex flex-col items-center justify-center rounded-xl bg-theme-secondary/20 hover:bg-theme-secondary/50 transition p-4 cursor-pointer w-full h-full min-w-0"
             >
               <span className="text-3xl mb-2">{icon}</span>
               <span className="text-xs font-semibold" style={{ color: 'var(--theme-primary-text)' }}>{label}</span>

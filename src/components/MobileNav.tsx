@@ -13,7 +13,7 @@ type MobileNavProps = {
 const MobileNav: React.FC<MobileNavProps> = ({ show }) => (
   <nav
     className={
-      `fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-[#8C2F1B] border-t flex justify-around items-center py-2 text-xs z-50 text-white w-full
+      `fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-[var(--theme-primary)] border-t flex justify-around items-center py-2 text-xs z-50 text-white w-full
       transition-transform duration-300
       ${show ? 'translate-y-0' : 'translate-y-full'}`
     }
@@ -30,7 +30,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ show }) => (
       Orders
     </div>
     <div className="text-center">
-      <div className="w-14 h-14 rounded-full bg-white border-4 border-[#8C2F1B] -mt-10" />
+      <div className="w-14 h-14 rounded-full bg-white border-4 border-[var(--theme-primary)] -mt-10" />
     </div>
     <div className="text-center nav-button flex flex-col items-center gap-2">
       <ChatBubble className="iconoir-chat-bubble nav-icon mx-auto text-lg" />

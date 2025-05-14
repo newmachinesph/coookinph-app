@@ -32,7 +32,7 @@ export default function HomePage() {
         <MenuGrid />
 
         {/* Featured Dishes */}
-        <div className="w-full">
+        <div className="w-full mt-4">
           <h2 className="text-lg font-bold mb-3">Featured Dishes</h2>
           <div className="grid grid-cols-1 gap-4">
             {featuredDishes.map(dish => (
