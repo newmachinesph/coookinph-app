@@ -41,6 +41,44 @@ const featuredDishes = [
   },
 ];
 
+const homeCooks = [
+  {
+    name: 'Aling Maria',
+    image: '/images/aling-maria.jpg',
+    bio: 'Known for her authentic Adobo and warm hospitality.',
+    location: 'Manila',
+    specialty: 'Adobo, Menudo',
+  },
+  {
+    name: 'Mang Lito',
+    image: '/images/mang-lito.jpg',
+    bio: 'Expert in grilled dishes and Filipino BBQ.',
+    location: 'Quezon City',
+    specialty: 'Inihaw, BBQ',
+  },
+  {
+    name: 'Nanay Fe',
+    image: '/images/nanay-fe.jpg',
+    bio: 'Loves cooking hearty stews for her family and neighbors.',
+    location: 'Cavite',
+    specialty: 'Kare-Kare, Sinigang',
+  },
+  {
+    name: 'Chef Ana',
+    image: '/images/chefs.png',
+    bio: 'Fusion cook blending Filipino and Western flavors.',
+    location: 'Makati',
+    specialty: 'Fusion, Pasta',
+  },
+  {
+    name: 'Tita Rose',
+    image: '/images/hero-image.jpg',
+    bio: 'Passionate about traditional recipes passed down generations.',
+    location: 'Taguig',
+    specialty: 'Laing, Bicol Express',
+  },
+];
+
 export default function UlamPage() {
   return (
     <MobileLayout hideNav={true}>
@@ -74,6 +112,36 @@ export default function UlamPage() {
                 <div>
                   <div className="font-semibold">{dish.name}</div>
                   <div className="text-sm text-gray-600">{dish.description}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Home Cook Profiles Section */}
+        <div className="w-full mt-8 px-4">
+          <h2 className="text-lg font-bold mb-6">Home Cooks</h2>
+          <div className="grid grid-cols-1 gap-4">
+            {homeCooks.map(cook => (
+              <div
+                key={cook.name}
+                className="flex items-center bg-white rounded-lg "
+              >
+                <img
+                  src={cook.image}
+                  alt={cook.name}
+                  className="w-16 h-16 object-cover rounded-md mr-4"
+                />
+                <div>
+                  <div className="font-semibold text-base">{cook.name}</div>
+                  <div className="text-xs text-gray-500 mb-1">
+                    {cook.location}
+                    {' '}
+                    &middot;
+                    {' '}
+                    <span className="italic">{cook.specialty}</span>
+                  </div>
+                  <div className="text-sm text-gray-600">{cook.bio}</div>
                 </div>
               </div>
             ))}
