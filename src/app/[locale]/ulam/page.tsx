@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import CuisineTypeSlider from '@/components/CuisineTypeSlider';
 import UlamHeader from '@/components/UlamHeader';
 import MobileLayout from '@/layouts/MobileLayout';
