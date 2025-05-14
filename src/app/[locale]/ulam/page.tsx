@@ -2,6 +2,7 @@
 import CuisineTypeSlider from '@/components/CuisineTypeSlider';
 import UlamHeader from '@/components/UlamHeader';
 import MobileLayout from '@/layouts/MobileLayout';
+import Link from 'next/link';
 import React from 'react';
 
 const cuisineTypes = [
@@ -123,29 +124,46 @@ export default function UlamPage() {
         <div className="w-full mt-8 px-4">
           <h2 className="text-lg font-bold mb-6">Home Cooks</h2>
           <div className="grid grid-cols-1 gap-4">
-            {homeCooks.map(cook => (
-              <div
-                key={cook.name}
-                className="flex items-center bg-white rounded-lg "
-              >
-                <img
-                  src={cook.image}
-                  alt={cook.name}
-                  className="w-16 h-16 object-cover rounded-md mr-4"
-                />
-                <div>
-                  <div className="font-semibold text-base">{cook.name}</div>
-                  <div className="text-xs text-gray-500 mb-1">
-                    {cook.location}
-                    {' '}
-                    &middot;
-                    {' '}
-                    <span className="italic">{cook.specialty}</span>
+            {homeCooks.map((cook) => {
+              // If cook is Aling Maria, wrap in a link to /@aling-maria
+              const isAlingMaria = cook.name === 'Aling Maria';
+              const cookCard = (
+                <div
+                  key={cook.name}
+                  className="flex items-center bg-white rounded-lg "
+                >
+                  <img
+                    src={cook.image}
+                    alt={cook.name}
+                    className="w-16 h-16 object-cover rounded-md mr-4"
+                  />
+                  <div>
+                    <div className="font-semibold text-base">{cook.name}</div>
+                    <div className="text-xs text-gray-500 mb-1">
+                      {cook.location}
+                      {' '}
+                      &middot;
+                      {' '}
+                      <span className="italic">{cook.specialty}</span>
+                    </div>
+                    <div className="text-sm text-gray-600">{cook.bio}</div>
                   </div>
-                  <div className="text-sm text-gray-600">{cook.bio}</div>
                 </div>
-              </div>
-            ))}
+              );
+              if (isAlingMaria) {
+                return (
+                  <Link
+                    key={cook.name}
+                    href="/@aling-maria"
+                    className="block hover:shadow-lg transition"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    {cookCard}
+                  </Link>
+                );
+              }
+              return cookCard;
+            })}
           </div>
         </div>
       </div>
