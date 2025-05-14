@@ -1,6 +1,17 @@
+import CuisineTypeSlider from '@/components/CuisineTypeSlider';
 import UlamHeader from '@/components/UlamHeader';
 import MobileLayout from '@/layouts/MobileLayout';
 import React from 'react';
+
+const cuisineTypes = [
+  { name: 'Filipino', image: '/images/adobo.jpg' },
+  { name: 'Chinese', image: '/images/makati.jpg' },
+  { name: 'Japanese', image: '/images/chefs.png' },
+  { name: 'Korean', image: '/images/hero-image.jpg' },
+  { name: 'Western', image: '/images/diy-box.png' },
+  { name: 'Indian', image: '/images/laing.jpg' },
+  { name: 'Thai', image: '/images/sinigang.jpg' },
+];
 
 const featuredDishes = [
   {
@@ -34,14 +45,20 @@ export default function UlamPage() {
   return (
     <MobileLayout hideNav={true}>
       <UlamHeader />
-      <div className="flex flex-col items-center w-full px-4 pt-8">
-        <h1 className="text-2xl font-bold mt-6 mb-2" style={{ color: 'var(--theme-primary-text)' }}>
-          Ulam
-        </h1>
-        <p className="text-gray-700 text-center mb-6">
-          Discover delicious Filipino ulam (main dishes) from home chefs and cooks!
-        </p>
-        <div className="w-full mt-4">
+      <div className="flex flex-col items-center w-full pt-8">
+        <div className="w-full">
+          <h1 className="text-2xl font-bold mt-6 mb-2 px-4" style={{ color: 'var(--theme-primary-text)' }}>
+            Ulam
+          </h1>
+          <p className="text-gray-700 text-center mb-6 px-4">
+            Discover delicious Filipino ulam (main dishes) from home chefs and cooks!
+          </p>
+        </div>
+
+        {/* Cuisine Types Slider Section */}
+        <CuisineTypeSlider cuisineTypes={cuisineTypes} />
+
+        <div className="w-full mt-4 px-4">
           <h2 className="text-lg font-bold mb-6">Featured Dishes</h2>
           <div className="grid grid-cols-1 gap-4">
             {featuredDishes.map(dish => (
