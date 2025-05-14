@@ -1,4 +1,3 @@
-import { DemoBanner } from '@/components/DemoBanner';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -17,7 +16,6 @@ export default async function Layout(props: {
 
   return (
     <>
-      <DemoBanner />
       <BaseTemplate
         leftNav={(
           <>
@@ -89,7 +87,7 @@ export default async function Layout(props: {
           </>
         )}
       >
-        <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
+        <div className="">{props.children}</div>
       </BaseTemplate>
     </>
   );
