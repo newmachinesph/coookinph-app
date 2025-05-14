@@ -23,13 +23,16 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({ children, hideNav }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      if (currentY > lastScrollY.current && currentY > 40) {
-        setShowNavState(false); // scrolling up, hide nav
-      } else {
-        setShowNavState(true); // scrolling down, show nav
+
+      if (currentY < lastScrollY.current) {
+        setShowNavState(false); // scrolling up -> show nav
+      } else if (currentY > lastScrollY.current) {
+        setShowNavState(true); // scrolling down -> hide nav
       }
+
       lastScrollY.current = currentY;
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

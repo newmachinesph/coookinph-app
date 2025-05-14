@@ -31,6 +31,7 @@ const featuredDishes = [
     image: '/images/chefs.png',
     description: 'Spicy pork in coconut milk.',
   },
+
 ];
 
 export default function HomePage() {
