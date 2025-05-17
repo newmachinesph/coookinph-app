@@ -5,7 +5,7 @@ import MobileLayout from '@/layouts/MobileLayout';
 import { notFound } from 'next/navigation';
 
 type PageProps = {
-  params: { slug: string };
+  params: any;
 };
 
 export default async function MenuPage({ params }: PageProps) {

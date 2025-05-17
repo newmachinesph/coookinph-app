@@ -6,7 +6,7 @@ import MobileLayout from '@/layouts/MobileLayout';
 import { notFound } from 'next/navigation';
 
 type PageProps = {
-  params: { slug?: string; locale?: string };
+  params: any;
 };
 
 export default async function CookPage({ params }: PageProps) {
