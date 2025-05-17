@@ -3,15 +3,13 @@ import React from 'react';
 
 const MENU_ITEMS = [
   { label: 'Ulam', icon: '🍲', href: 'ulam' }, // Main dishes
-  { label: 'Meals', icon: '🍚', href: 'rice-meals' }, // Rice meals
   { label: 'Almusal', icon: '🍳', href: 'almusal' }, // Breakfast
   { label: 'Tanghalian', icon: '🍛', href: 'tanghalian' }, // Lunch
   { label: 'Gabihan', icon: '🍽️', href: 'gabihan' }, // Dinner
-  { label: 'DIY Box', icon: '📦', href: 'diy-box' }, // Cook at home kits
 ];
 
 const MenuGrid: React.FC = () => (
-  <div className="grid grid-cols-4 gap-3 pb-4 w-full">
+  <div className="grid grid-cols-4 gap-2 pb-4 w-full">
     {MENU_ITEMS.map(({ label, icon, href }) =>
       href
         ? (

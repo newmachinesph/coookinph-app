@@ -2,7 +2,7 @@ import { ChatBubble, Heart, NavArrowLeft, Search } from 'iconoir-react';
 import Link from 'next/link';
 import React from 'react';
 
-const UlamHeader: React.FC<{ onSearchChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }> = ({ onSearchChange }) => (
+const MenuHeader: React.FC<{ onSearchChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }> = ({ onSearchChange }) => (
   <header className="fixed top-0 left-0 right-0 z-40 bg-[var(--theme-primary)] px-4 pt-4 pb-2 text-white max-w-[480px] mx-auto w-full">
     <div className="flex items-center h-10">
       <Link href=".." className="back-arrow cursor-pointer flex items-center w-16">
@@ -38,4 +38,4 @@ const UlamHeader: React.FC<{ onSearchChange?: (e: React.ChangeEvent<HTMLInputEle
   </header>
 );
 
-export default UlamHeader;
+export default MenuHeader;

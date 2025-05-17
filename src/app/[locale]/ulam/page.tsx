@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import CuisineTypeSlider from '@/components/CuisineTypeSlider';
-import UlamHeader from '@/components/UlamHeader';
+import UlamHeader from '@/components/MenuHeader';
 import MobileLayout from '@/layouts/MobileLayout';
 import Link from 'next/link';
 import React from 'react';
