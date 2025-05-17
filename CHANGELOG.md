@@ -1,3 +1,21 @@
+# 1.0.0 (2025-05-17)
+
+
+### Features
+
+* initial ([eae634e](https://github.com/livelifewithlove/coookinph-app/commit/eae634e8c3b0a98d4b87fb7300902a8e7fc70865))
+* update ([8de4ce4](https://github.com/livelifewithlove/coookinph-app/commit/8de4ce48f0d92f0810c2c121cd17975ceb686e63))
+* update ([8728bd4](https://github.com/livelifewithlove/coookinph-app/commit/8728bd4bd72b9d15dcbb66c1f5e11368364f23bd))
+* update ([ae23899](https://github.com/livelifewithlove/coookinph-app/commit/ae23899c706b1ac8180b33826665217adb376dfa))
+* update ([a4ac541](https://github.com/livelifewithlove/coookinph-app/commit/a4ac541d3061bf2c8cef8a7998f6f2a08287e36f))
+* update ([c696df4](https://github.com/livelifewithlove/coookinph-app/commit/c696df488d82318697983c787942656bde426f40))
+* update ([18adeb3](https://github.com/livelifewithlove/coookinph-app/commit/18adeb34902df889a8cbe27d3fd6e9a183945fe2))
+* update ([9404e16](https://github.com/livelifewithlove/coookinph-app/commit/9404e161023390a82870846e4f013ca82923d9c2))
+* update ([82c63ee](https://github.com/livelifewithlove/coookinph-app/commit/82c63eeb616b192ebb52eb74c8925fcdf3044a24))
+* update ([09096fb](https://github.com/livelifewithlove/coookinph-app/commit/09096fbb15d4a3602506427b60114d12ced5e944))
+* update ([461c946](https://github.com/livelifewithlove/coookinph-app/commit/461c9466adc4a6b55352745990319dfa67d618a4))
+* update ([fd5f122](https://github.com/livelifewithlove/coookinph-app/commit/fd5f12285e41a6967c041abaf15eef5aa349dc8b))
+
 # 1.0.0 (2025-05-14)
 
 
