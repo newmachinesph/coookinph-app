@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-theme-primary: #b01c1c;
+  --color-theme-secondary: #f9db3b;
+}
+
+:root {
+  --theme-primary: #b01c1c;
+  --theme-bg: #fff;
+  --theme-primary-text: #431605;
+  --theme-accent: #ed8913;
+  --theme-cream: #fef9ec;
+  --theme-cream-dark: #f9db8e;
+  --theme-terracotta: #f7443c;
+  /* Add more as needed */
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
