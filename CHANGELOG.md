@@ -1,3 +1,10 @@
+# 1.0.0 (2026-10-18)
+
+
+### Features
+
+* Coookin.ph ([206358b](https://github.com/newmachinesph/coookinph-app/commit/206358b6b96453a142632c4e41f5abfa271e1904))
+
 # 1.0.0 (2026-03-22)
 
 
